@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zone of SWF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+      <div class="logo-area">
+        <span class="game-icon">🎮</span>
+        <h2>Game Zone of SWF</h2>
+      </div>
+    </div>
+
+    <div class="welcome-section">
+      <h1>Welcome to Game Zone of SWF</h1>
+      <p>Play Endless Car Rush, Snake Game and more free games!</p>
+    </div>
+
+    <div class="games-container">
+      
+      <div class="game-card">
+        <div class="card-img-placeholder" style="background: #3b82f6;">🏎️ Car Game</div>
+        <h3>🏎️ Endless Car Rush</h3>
+        <p>Racing Game</p>
+        <button id="openCarBtn" class="play-btn">Play Now</button>
+      </div>
+
+      <div class="game-card">
+        <div class="card-img-placeholder" style="background: #10b981;">🐍 Snake Game</div>
+        <h3>🐍 Retro Snake</h3>
+        <p>Classic Arcade</p>
+        <button id="openSnakeBtn" class="play-btn" style="background: #10b981;">Play Now</button>
+      </div>
+
+      <div class="game-card">
+        <div class="card-img-placeholder" style="background: #f59e0b;">⚽ Ball Game</div>
+        <h3>⚽ Bouncing Ball</h3>
+        <p>Coming Soon</p>
+      </div>
+
+      <div class="game-card">
+        <div class="card-img-placeholder" style="background: #64748b;">♟️ Chess Game</div>
+        <h3>♟️ Chess</h3>
+        <p>Coming Soon</p>
+      </div>
+    </div>
+
+    <div id="carPopup" class="popup-overlay">
+      <div class="popup-content">
+        <button id="closeCarBtn" class="close-btn">&times; Close</button>
+        
+        <div id="game-window-area">
+          <div id="game">
+              <div id="leftGrass"></div>
+              <div id="road"></div>
+              <div id="rightGrass"></div>
+              <div id="score">Score: 0</div>
+              <div id="level">Level: 1</div>
+              <div id="car"></div>
+          </div>
+
+          <div id="controls">
+              <div id="left" class="control">⬅️</div>
+              <div id="up" class="control">⬆️</div>
+              <div id="down" class="control">⬇️</div>
+              <div id="right" class="control">➡️</div>
+          </div>
+
+          <div id="startScreen">
+              <button id="startBtn">START GAME</button>
+          </div>
+
+          <div id="modal">
+              <div id="box">
+                  <div id="gameOverText">GAME OVER</div>
+                  <button id="replayBtn">PLAY AGAIN</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="snakePopup" class="popup-overlay">
+      <div class="popup-content-snake">
+        <button id="closeSnakeBtn" class="close-btn-snake">&times; Close</button>
+        
+        <div class="snake-game-wrapper">
+            <div class="snake-scoreboard">
+                <div class="score-box">
+                    <span class="label">SCORE</span>
+                    <span id="snakeScore" class="val score-green">000</span>
+                </div>
+                <div class="score-box align-right">
+                    <span class="label">HIGH SCORE</span>
+                    <span id="snakeHighScore" class="val score-yellow">000</span>
+                </div>
+            </div>
+
+            <div class="snake-screen-container">
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                
+                <div id="menu-overlay" class="snake-menu-overlay">
+                    <h1 id="menu-title">SNAKE GAME</h1>
+                    <p id="menu-subtitle">Play using Arrow Keys / WASD on Laptop, or the buttons below.</p>
+                    <button id="action-btn">START GAME</button>
+                </div>
+            </div>
+
+            <div class="snake-controls">
+                <div class="row">
+                    <button id="snakeUpBtn" class="control-btn-sk">⬆️</button>
+                </div>
+                <div class="row gap">
+                    <button id="snakeLeftBtn" class="control-btn-sk">⬅️</button>
+                    <button id="snakeDownBtn" class="control-btn-sk">⬇️</button>
+                    <button id="snakeRightBtn" class="control-btn-sk">➡️</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
